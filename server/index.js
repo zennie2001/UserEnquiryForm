@@ -11,6 +11,9 @@ app.use(express.json())
 //http://localhost:8050/api/website/enquiry/insert
 app.use("/api/website/enquiry", enquiryRoutes)
 
+app.get('/', (req, res)=>{
+    res.send('API is working')
+})
 
 
 //connect mongoDB
