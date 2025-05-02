@@ -22,7 +22,7 @@ function EnquiryForm() {
         //   message:event.target.message.value
         // }
 
-        axios.post(`http://localhost:8050/api/website/enquiry/insert`,formData).then((res)=>{
+        axios.post(`https://user-enquiry-mern-backend.vercel.app/api/website/enquiry/insert`,formData).then((res)=>{
           console.log(res.data)
           toast.success("Enquiry Saved Successfully!")
 

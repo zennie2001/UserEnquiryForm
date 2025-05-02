@@ -15,7 +15,7 @@ function EnquiryList({data, getAllenquiry , Swal, setFormData}) {
     }).then((result)=>{
 
       if (result.isConfirmed) {
-        axios.delete(`http://localhost:8050/api/website/enquiry/delete/${delid}`)
+        axios.delete(`https://user-enquiry-mern-backend.vercel.app/api/website/enquiry/delete/${delid}`)
         .then((res)=>{
           toast.success('Enquiry Deleted successfully')
           getAllenquiry()
@@ -30,7 +30,7 @@ function EnquiryList({data, getAllenquiry , Swal, setFormData}) {
 
 
   let editRow= (editId)=>{
-      axios.get(`http://localhost:8050/api/website/enquiry/single/${editId}`)
+      axios.get(`https://user-enquiry-mern-backend.vercel.app/api/website/enquiry/single/${editId}`)
       .then((res)=>{
           let data= res.data
           setFormData(data.enquiryRow)
